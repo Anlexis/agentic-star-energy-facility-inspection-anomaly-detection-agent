@@ -1,0 +1,12 @@
+# Runtime parameters — loaded by the platform registry and passed as
+# Graph(config=...). Separate from config/agent.yaml (the static manifest).
+
+max_retry: 3
+timeout_s: 30
+
+# Severity classification thresholds, as a percentage deviation from the
+# baseline. A caller may override them per run through input_context; both
+# routes are validated for type, finiteness and range before use.
+severity:
+  critical_deviation_pct: 20.0
+  warning_deviation_pct: 5.0
